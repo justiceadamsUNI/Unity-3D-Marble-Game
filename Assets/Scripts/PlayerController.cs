@@ -28,6 +28,9 @@ public class PlayerController : MonoBehaviour {
             case "Fall Detector":
                 respawn();
                 break;
+            case "Level Finish Detector":
+                // ToDo: Do whatever needs to be done when the level is finished.
+                break;
         }
     }
 
