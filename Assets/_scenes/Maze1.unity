@@ -172,13 +172,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 168826647}
-  m_LocalRotation: {x: 0.38268343, y: -0, z: -0, w: 0.92387956}
-  m_LocalPosition: {x: -0.26, y: 8.46, z: -8.43}
+  m_LocalRotation: {x: 0.47318086, y: -0, z: -0, w: 0.88096535}
+  m_LocalPosition: {x: -0.26, y: 12.97, z: -9.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 56.482002, y: 0, z: 0}
 --- !u!114 &168826653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 232147440}
   - component: {fileID: 232147439}
   m_Layer: 0
-  m_Name: West wall
+  m_Name: East Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ Transform:
   m_GameObject: {fileID: 232147437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 2, z: 20}
+  m_LocalScale: {x: 0.3, y: 2, z: 20.3}
   m_Children: []
   m_Father: {fileID: 1993941819}
   m_RootOrder: 0
@@ -235,7 +235,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e30b3253866a44b3e83bdaf792362700, type: 2}
+  - {fileID: 2100000, guid: a7f631a651d2cb8448e4d2205cf9930b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -303,7 +303,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e30b3253866a44b3e83bdaf792362700, type: 2}
+  - {fileID: 2100000, guid: a5626328208c5f04ba52df87ae323c1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -430,7 +430,7 @@ GameObject:
   - component: {fileID: 841579620}
   - component: {fileID: 841579619}
   m_Layer: 0
-  m_Name: West wall (1)
+  m_Name: West Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -444,7 +444,7 @@ Transform:
   m_GameObject: {fileID: 841579617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10, y: 0, z: 0}
-  m_LocalScale: {x: 0.29999998, y: 2, z: 20}
+  m_LocalScale: {x: 0.29999998, y: 2, z: 20.3}
   m_Children: []
   m_Father: {fileID: 1993941819}
   m_RootOrder: 1
@@ -462,7 +462,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e30b3253866a44b3e83bdaf792362700, type: 2}
+  - {fileID: 2100000, guid: a7f631a651d2cb8448e4d2205cf9930b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -511,7 +511,7 @@ GameObject:
   - component: {fileID: 1446688293}
   - component: {fileID: 1446688292}
   m_Layer: 0
-  m_Name: West wall (3)
+  m_Name: North Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -543,7 +543,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e30b3253866a44b3e83bdaf792362700, type: 2}
+  - {fileID: 2100000, guid: a7f631a651d2cb8448e4d2205cf9930b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -613,7 +613,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: fd173854a9bc6214ea25dd5076506cce, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -702,7 +702,7 @@ GameObject:
   - component: {fileID: 1659927319}
   - component: {fileID: 1659927318}
   m_Layer: 0
-  m_Name: West wall (2)
+  m_Name: South Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,7 +734,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e30b3253866a44b3e83bdaf792362700, type: 2}
+  - {fileID: 2100000, guid: a7f631a651d2cb8448e4d2205cf9930b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
