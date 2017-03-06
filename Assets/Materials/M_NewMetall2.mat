@@ -6,20 +6,19 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Background
-  m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _ALPHABLEND_ON _EMISSION
-  m_LightmapFlags: 1
-  m_CustomRenderQueue: 3000
-  stringTagMap:
-    RenderType: Transparent
+  m_Name: M_NewMetall2
+  m_Shader: {fileID: 4800000, guid: c7e45cea273234c4ba74499b7f36ace0, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 0
+  m_CustomRenderQueue: 2000
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
     - first:
         name: _BumpMap
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2b636ce1c0a546a4395b93119473bcdb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -49,7 +48,19 @@ Material:
     - first:
         name: _MainTex
       second:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c6ee0020885170d4db4f567b4ec19c44, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Mask
+      second:
+        m_Texture: {fileID: 2800000, guid: c3a6def1fa26d944c8b9d3bd0fcd4969, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Metall
+      second:
+        m_Texture: {fileID: 2800000, guid: c75c2ef23567c614b8b7f4bb23c32374, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - first:
@@ -70,7 +81,16 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - first:
+        name: _Roughness
+      second:
+        m_Texture: {fileID: 2800000, guid: 593be4520712579479b7144fec0f214b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - first:
+        name: _Brighness
+      second: 1
     - first:
         name: _BumpScale
       second: 1
@@ -82,22 +102,37 @@ Material:
       second: 1
     - first:
         name: _DstBlend
-      second: 10
+      second: 0
     - first:
-        name: _GlossMapScale
-      second: 1
+        name: _Gloss
+      second: 0.72
     - first:
         name: _Glossiness
-      second: 0.709
+      second: 0.5
     - first:
-        name: _GlossyReflections
+        name: _MaxRoughness
+      second: 0.8
+    - first:
+        name: _MetalicValue
+      second: 1.7
+    - first:
+        name: _MetallShading
+      second: 0.92
+    - first:
+        name: _MetallShadingRoughness
       second: 1
     - first:
         name: _Metallic
-      second: 0.804
+      second: 1
+    - first:
+        name: _MinRoughness
+      second: 0.4
     - first:
         name: _Mode
-      second: 2
+      second: 0
+    - first:
+        name: _NormalIntensity
+      second: -4.5
     - first:
         name: _OcclusionStrength
       second: 1
@@ -105,24 +140,27 @@ Material:
         name: _Parallax
       second: 0.02
     - first:
-        name: _SmoothnessTextureChannel
-      second: 0
-    - first:
-        name: _SpecularHighlights
-      second: 1
+        name: _RoughnessValue
+      second: 0.5
     - first:
         name: _SrcBlend
-      second: 5
+      second: 1
     - first:
         name: _UVSec
       second: 0
     - first:
+        name: _U_Tiling
+      second: 1
+    - first:
+        name: _V_Tiling
+      second: 1
+    - first:
         name: _ZWrite
-      second: 0
+      second: 1
     m_Colors:
     - first:
         name: _Color
-      second: {r: 0.09823744, g: 0.5808823, b: 0.26133817, a: 1}
+      second: {r: 1, g: 1, b: 1, a: 1}
     - first:
         name: _EmissionColor
       second: {r: 0, g: 0, b: 0, a: 1}
