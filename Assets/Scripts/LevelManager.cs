@@ -23,11 +23,14 @@ public class LevelManager : MonoBehaviour {
 	public Transform Spacer;
 	public List<Level> LevelList;
 
+	private int numOfLevels = 8;
+	private int currentLevel;
+
 
 
 	// Use this for initialization
 	void Start (){
-		FillList ()
+		FillList ();
 	}
 
 
@@ -67,8 +70,15 @@ public class LevelManager : MonoBehaviour {
 		}
 
 	}
-		
 
+//	void checkCurrentLevel(){
+//
+//		for (int i = 1; i < numOfLevels; i++) {
+//			loadedLevel = SceneManager.GetActiveScene;
+//		
+//
+//		}
+//	}
 
 
 }
