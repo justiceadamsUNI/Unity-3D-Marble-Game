@@ -15,16 +15,16 @@ public class LevelManager : MonoBehaviour {
 		public int isUnlocked; //UnLocked
 		public bool isPlayable; //IsInteractable
 
-		public Button.ButtonClickedEvent OnClickedEvent;
+		//public Button.ButtonClickedEvent OnClickedEvent;
 
 	}
+
 
 	public GameObject button;
 	public Transform Spacer;
 	public List<Level> LevelList;
 
-	private int numOfLevels = 8;
-	private int currentLevel;
+
 
 
 
@@ -50,6 +50,7 @@ public class LevelManager : MonoBehaviour {
 
 			actualButton.unlocked = level.isUnlocked;
 			actualButton.GetComponent<Button> ().interactable = level.isPlayable;
+			actualButton.GetComponent<Button> ().onClick.AddListener (() => loadLevels ("Level" + actualButton.LevelText.text));
 
 			newButton.transform.SetParent (Spacer, false);
 		}
@@ -71,14 +72,8 @@ public class LevelManager : MonoBehaviour {
 
 	}
 
-//	void checkCurrentLevel(){
-//
-//		for (int i = 1; i < numOfLevels; i++) {
-//			loadedLevel = SceneManager.GetActiveScene;
-//		
-//
-//		}
-//	}
-
+	void loadLevels(string value) {
+		SceneManager.LoadScene (value);
+	}
 
 }

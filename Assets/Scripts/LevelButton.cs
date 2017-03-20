@@ -11,6 +11,7 @@ public class LevelButton : MonoBehaviour {
 	public GameObject star2;
 	public GameObject star3;
 
-
+	void start(){
+	}
 
 }
