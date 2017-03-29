@@ -13,11 +13,19 @@ public class PlayerController : MonoBehaviour {
 
 	private int numOfLevels = 8;
 	private int currentLevel;
-	public int score = 0;
+    private float animationTime = 0.0f;
+    private bool respawnAnimationPlaying;
+    private bool destroyAnimationPlaying;
+    public int score = 0;
 
-	void Start(){
+
+    void Start(){
 		rb = GetComponent<Rigidbody> ();
         intialPosition = transform.position;
+
+        //Disable respawn and destroy animations
+        setDestroyAnimationEnabled(false);
+        setRespawnAnimationEnabled(false);
     }
 
 	void FixedUpdate(){
@@ -34,7 +42,7 @@ public class PlayerController : MonoBehaviour {
         switch(other.tag) {
             //Happens when a player falls of the map.
             case "Fall Detector":
-                respawn();
+                startDestroyAnimation();
                 break;
 			case "Level Finish Detector":
 				//get current level scene, unlock next level scene
@@ -45,15 +53,52 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    private void Update() {
+        animationTime -= Time.deltaTime;
+        if (animationTime < 0 && 
+            (respawnAnimationPlaying || destroyAnimationPlaying)) {
+
+            if (destroyAnimationPlaying) {
+                setDestroyAnimationEnabled(false);
+                destroyAnimationPlaying = false;
+                respawn();
+            } else if(respawnAnimationPlaying) {
+                setRespawnAnimationEnabled(false);
+                respawnAnimationPlaying = false;
+            }
+        }
+    }
+
     private void respawn() {
+        animationTime = 2.0f;
+        transform.position = intialPosition;
+
+        //enable animation
+        respawnAnimationPlaying = true;
+        setRespawnAnimationEnabled(true);
+    }
+
+    private void startDestroyAnimation() {
+        animationTime = 1.5f;
+
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.AddForce(Vector3.zero);
 
-        transform.position = intialPosition;
+        // enable animation
+        destroyAnimationPlaying = true;
+        setDestroyAnimationEnabled(true);
     }
-	 
-	void checkCurrentLevel(){
+
+    private void setDestroyAnimationEnabled(bool enabled) {
+        transform.GetChild(1).gameObject.SetActive(enabled);
+    }
+
+    private void setRespawnAnimationEnabled(bool enabled) {
+        transform.GetChild(0).gameObject.SetActive(enabled);
+    }
+
+    void checkCurrentLevel(){
 
 		for (int i = 1; i < numOfLevels; i++) {
 			if (SceneManager.GetActiveScene().name == "Level" + i) {
