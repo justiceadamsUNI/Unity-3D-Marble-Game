@@ -567,6 +567,9 @@ MonoBehaviour:
   - LevelText: 5
     isUnlocked: 0
     isPlayable: 0
+  - LevelText: 6
+    isUnlocked: 0
+    isPlayable: 0
 --- !u!4 &1438509877
 Transform:
   m_ObjectHideFlags: 0
