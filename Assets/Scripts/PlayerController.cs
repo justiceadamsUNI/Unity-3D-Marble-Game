@@ -41,8 +41,9 @@ public class PlayerController : MonoBehaviour {
     void OnTriggerEnter(Collider other) {
         switch(other.tag) {
             //Happens when a player falls of the map.
-            case "Fall Detector":
-                startDestroyAnimation();
+			case "Fall Detector":
+				Debug.Log ("hit");
+            	startDestroyAnimation();
                 break;
 			case "Level Finish Detector":
 				//get current level scene, unlock next level scene
