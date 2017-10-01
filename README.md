@@ -10,4 +10,4 @@ This game technically was a school project for software engineering, but I spent
 
 ![respawn](https://i.imgur.com/D1ywR8P.png)
 
-See more of this projeet on [my website!](http://www.justiceadams.com/projects/)
+See more of this project on [my website!](http://www.justiceadams.com/projects/)
